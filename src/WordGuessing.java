@@ -12,16 +12,20 @@ public class WordGuessing {
         Scanner input = new Scanner(System.in);
         String usedCharacters = "";
         String selectedWordString = Arrays.toString(wordChars);
+        String outputWord = "";
 
 
         //while loop to repeat the process of getting an input
             while (u < chances){
+                outputWord = "";
+                for(int k = 0; k < selectedWord.length(); k++){
+                outputWord += outputChars[k] + " ";
+            }
+            
 
             //prints out current info and some instructions
-            System.out.println("Used Characters: " + usedCharacters);
-            for(int k = 0; k < selectedWord.length(); k++){
-            System.out.print(outputChars[k] + " ");
-            }
+            System.out.println("Used Characters: " + usedCharacters + "\n" + outputWord);
+            
             System.out.println("\n" + "Enter a Letter!");
             System.out.println("===============");
             String a1 = input.nextLine();
