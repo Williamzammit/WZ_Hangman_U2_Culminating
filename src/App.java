@@ -39,7 +39,7 @@ public class App {
 
 
         
-            
+            //Sets up the arrays and calls the method which houses the loop that receives guesses from the user
             char[] wordChars = Arrays.copyOf(myCharArray, selectedWord.length());
             for (int o = 0; o < selectedWord.length(); o++){
                 wordChars[o] = selectedWord.charAt(o);

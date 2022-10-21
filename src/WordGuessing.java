@@ -8,15 +8,16 @@ import java.util.Arrays;
 public class WordGuessing {
     public void wordGuessing(String selectedWord, char[] wordChars, int u, char[] outputChars, int chances){
 
+        //initializes variables
         Scanner input = new Scanner(System.in);
         String usedCharacters = "";
         String selectedWordString = Arrays.toString(wordChars);
-        String outputWord = "";
 
 
+        //while loop to repeat the process of getting an input
             while (u < chances){
-            outputWord = Arrays.toString(outputChars);
 
+            //prints out current info and some instructions
             System.out.println("Used Characters: " + usedCharacters);
             for(int k = 0; k < selectedWord.length(); k++){
             System.out.print(outputChars[k] + " ");
@@ -27,7 +28,7 @@ public class WordGuessing {
 
 
 
-
+                //checks to see if input has already been guessed
                 if (usedCharacters.indexOf(a1) >= 0){
                     System.out.println("You have already used this letter!");
 
@@ -39,7 +40,7 @@ public class WordGuessing {
 
 
 
-            
+            //Makes changes to the output if necessary based on the guess
             for (int i = 0; i < selectedWord.length(); i++){
             if (a1.charAt(0) == wordChars[i]){
                 outputChars[i] = a1.charAt(0);
@@ -48,6 +49,7 @@ public class WordGuessing {
 
 
             }
+            //Checks to see if the entire word has been correctly guessed to end the game
             if (Arrays.equals(wordChars, outputChars)) {
 
                 u = 6;
@@ -59,6 +61,7 @@ public class WordGuessing {
              }
             }
 
+            //The punishment of guessing a number not in the chosed word
         if(selectedWordString.indexOf(a1) <= 0) {
                 System.out.println("There are no " + a1.charAt(0) + "s");
                 u++;
