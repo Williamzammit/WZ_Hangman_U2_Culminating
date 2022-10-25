@@ -21,7 +21,7 @@ public class WordGuessing {
                 for(int k = 0; k < selectedWord.length(); k++){
                 outputWord += outputChars[k] + " ";
             }
-            
+
 
             //prints out current info and some instructions
             System.out.println("Used Characters: " + usedCharacters + "\n" + outputWord);
@@ -65,7 +65,7 @@ public class WordGuessing {
              }
             }
 
-            //The punishment of guessing a number not in the chosed word
+            //The punishment of guessing a number not in the chosen word
         if(selectedWordString.indexOf(a1) <= 0) {
                 System.out.println("There are no " + a1.charAt(0) + "s");
                 u++;
